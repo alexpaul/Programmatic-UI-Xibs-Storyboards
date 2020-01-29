@@ -47,3 +47,14 @@ guard let podcastDetailController = podcastDetailStoryboard.instantiateViewContr
 ```swift 
 navigationController?.pushViewController(podcastDetailController, animated: true)
 ```
+
+#### Setting the item size of a collection view cell via the UICollectionViewDelegateFlowLayout 
+
+```swift 
+func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  // override the default values of the itemSize layout from the collectionView property initializer in the PodcastView
+  let maxSize: CGSize = UIScreen.main.bounds.size
+  let itemWidth: CGFloat = maxSize.width * 0.95 // 95% of the width of device
+  return CGSize(width: itemWidth, height: 120)
+}
+```
