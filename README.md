@@ -58,3 +58,10 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
   return CGSize(width: itemWidth, height: 120)
 }
 ```
+
+
+##### Configuring large title on the navigation bar 
+
+```swift 
+navigationController?.navigationBar.prefersLargeTitles = true
+```
