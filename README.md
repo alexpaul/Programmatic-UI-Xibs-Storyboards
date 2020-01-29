@@ -18,6 +18,8 @@ podcastView.collectionView.register(UINib(nibName: "PodcastCell", bundle: nil), 
 
 #### Setting up a collectin view in code
 
+> NB: Reminder, a colleciton view must have a layout. 
+
 ```swift 
 // collection view
 public lazy var collectionView: UICollectionView = {
@@ -28,4 +30,20 @@ public lazy var collectionView: UICollectionView = {
   cv.backgroundColor = .yellow
   return cv
 }()
+```
+
+
+#### Getting a view controller instance from storyboard 
+
+```swift 
+guard let podcastDetailController = podcastDetailStoryboard.instantiateViewController(identifier: "PodcastDetailController") as? PodcastDetailController else {
+  fatalError("could not downcast to PodcastDetailController")
+}
+```
+
+
+#### Segue via push segue to a view controller 
+
+```swift 
+navigationController?.pushViewController(podcastDetailController, animated: true)
 ```
