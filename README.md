@@ -2,6 +2,8 @@
 
 Mixing programmatic UI code with storyboards and xibs.
 
+![xibs storyboards code](Assets/xibs-storyboards-code.gif)
+
 #### Registering a custom cell in code 
 
 ```swift 
